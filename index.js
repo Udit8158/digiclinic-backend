@@ -5,6 +5,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import registerRoute from "./Routers/register.js";
 import signInRoute from "./routers/signin.js";
+import clinicsRoute from "./routers/clinics.js";
 
 // define app and port
 const app = express();
@@ -24,6 +25,7 @@ mongoose.connect(process.env.DB_URI);
 // Use Routes
 app.use("/api/register", registerRoute);
 app.use("/api/signin", signInRoute);
+app.use("/api/clinics", clinicsRoute);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

@@ -1,7 +1,7 @@
 import express from "express";
 import UserModel from "../models/Users.js";
-import { comparePassword, hashPassword } from "../controllers/hashpassword.js";
-import { jwtSign } from "../controllers/jwt.js";
+import { comparePassword } from "../controllers/auth/hashpassword.js";
+import { jwtSign } from "../controllers/auth/jwt.js";
 
 const signInRoute = express.Router();
 
